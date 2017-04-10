@@ -19,7 +19,7 @@ import com.example.constant.ViewConstant;
 import com.example.entity.User;
 import com.example.model.ContactModel;
 import com.example.service.ContactService;
-
+//Nuevo controller
 @Controller
 //@PreAuthorize("permitAll()")
 @RequestMapping("/contacts")
