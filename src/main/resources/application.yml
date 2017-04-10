@@ -1,0 +1,33 @@
+#Banner de arranque
+banner:
+  location: classpath:/folderbanner/banner.txt
+  
+#spring:
+#    thymeleaf:
+#        template-resolver-order: 0
+#Para quitar la pagina 404 de defecto de sprin boot
+#server:
+#  error:
+#    whitelabel:
+#      enabled: false
+
+
+
+spring:       ########MY SQL##################
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false
+    username: root
+    password:
+  jpa:        ########HIBERNATE###############
+    show-sql: true
+    hibernate:
+      ddl-auto: update #Si actualiza un campo de la entity elimina el campo de la tabla d ela bbdd
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy  #Forma dialecto al hacer las consultas
+    properties:
+      hibernate:  
+        dialect: org.hibernate.dialect.MySQL5Dialect  #Dialecto de la bbdd
+    
+     
+      
+
