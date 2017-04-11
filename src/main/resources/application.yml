@@ -27,7 +27,6 @@ spring:       ########MY SQL##################
     properties:
       hibernate:  
         dialect: org.hibernate.dialect.MySQL5Dialect  #Dialecto de la bbdd
-    
-     
-      
+  thymeleaf:
+    cache: false
 
