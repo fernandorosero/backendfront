@@ -41,7 +41,7 @@ public class ContactController {
 	//@PreAuthorize("hasRole('ROLE_ADMIN')")
 	//@PreAuthorize("permitAll()")
 	//@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
-	@PreAuthorize("hasRole('ROLE_USERPPPP')")  //el metodo tiene q sr public
+	@PreAuthorize("hasRole('ROLE_USER')")  //el metodo tiene q sr public
 	@GetMapping("/contactform")
 	public String redirectContactForm(@RequestParam(name="id", required=false)int id,
 			Model model){
