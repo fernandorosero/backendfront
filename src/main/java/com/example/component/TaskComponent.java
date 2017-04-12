@@ -14,7 +14,7 @@ public class TaskComponent {
 	
 	@Scheduled(fixedDelay = 5000)
 	public void toTask(){
-		LOG.info("TIME IS: " + new Date());
+		//LOG.info("TIME IS: " + new Date());
 	}
 	
 }

@@ -6,7 +6,8 @@ public class TestCrypt {
 
 	public static void main(String[] args) {
 		BCryptPasswordEncoder pe = new BCryptPasswordEncoder();
-		System.out.println(pe.encode("fer"));
+		System.out.println(pe.encode("marc"));
+		System.out.println("HOLA MARCOS");
 
 	}
 

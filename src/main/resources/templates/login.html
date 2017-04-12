@@ -17,17 +17,19 @@
   <body>
 
     <div class="container">
-	
+	 <h1 th:text="#{welcome}"></h1>
+	 <h1><spring:message code='welcome' var="dato"/></h1>
+	 #{welcome}
       <form class="form-signin" th:action="@{/logincheck}" method="POST">
       	<input type="hidden" name="${_csrf.paremeterName}" value="${_csrf.token}"/>
-        <h2 class="form-signin-heading">Acceso</h2>
+        <h2 class="form-signin-heading">poner  contraseña</h2>
         <label for="inputEmail" class="sr-only">Username</label>
-        <input type="text" class="form-control" placeholder="Username" name="username" id="username"/>
+        <input type="text" class="form-control" placeholder="Nombre de Usuario" name="username" id="username"/>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" class="form-control" placeholder="Password"  name="password" id="password"/>
         <div th:if="${error != null}" class="alert alert-danger" role="alert">Invalid id username password</div>
         <div th:if="${logout != null}" class="alert alert-success" role="alert">Logout succesfully!!!</div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">
+        <button class="btn btn-lg btn-info btn-block" type="submit">
         	<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Sign in
         </button>
       </form>
