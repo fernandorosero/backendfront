@@ -2,11 +2,14 @@ package com.example.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.component.Messages;
 import com.example.constant.ViewConstant;
 
 @Controller
@@ -14,6 +17,10 @@ public class LoginController {
 
 	
 	private static final Log LOG = LogFactory.getLog(LoginController.class);
+	
+	@Autowired
+	@Qualifier("messages")
+	private Messages messages;
 	/*
 	@GetMapping("/")
 	public String redirectToLogin(){
@@ -40,6 +47,8 @@ public class LoginController {
 		model.addAttribute("error", error);
 		model.addAttribute("logout", logout);
 		LOG.info("Returning to login view");
+		LOG.info("Retorna propertie: " + messages.get("welcome.login"));
+		//model.addAttribute("welcome", messages.get("welcome.login"));
 		return ViewConstant.LOGIN;
 	}
 	

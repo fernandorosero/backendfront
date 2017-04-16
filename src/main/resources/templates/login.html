@@ -17,9 +17,10 @@
   <body>
 
     <div class="container">
-	 <h1 th:text="#{welcome}"></h1>
-	 <h1><spring:message code='welcome' var="dato"/></h1>
-	 #{welcome}
+	 <h1 th:text="#{welcome.login}"></h1>
+	  
+	 <p th:text="#{welcome.login}">Welcome!</p>
+	 
       <form class="form-signin" th:action="@{/logincheck}" method="POST">
       	<input type="hidden" name="${_csrf.paremeterName}" value="${_csrf.token}"/>
         <h2 class="form-signin-heading">poner  contraseña</h2>

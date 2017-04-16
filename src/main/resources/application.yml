@@ -29,4 +29,7 @@ spring:       ########MY SQL##################
         dialect: org.hibernate.dialect.MySQL5Dialect  #Dialecto de la bbdd
   thymeleaf:
     cache: false
-
+  messages:          ####CAMBIO A I18N PARA INTERNACIIONALIZACION
+    basename: i18n/messages
+    cache-seconds: -1
+    encoding: UTF-8  
